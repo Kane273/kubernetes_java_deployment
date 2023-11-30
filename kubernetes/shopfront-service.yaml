@@ -31,12 +31,12 @@ spec:
     spec:
       containers:
       - name: shopfront
-        image: praveensingam1994/shopfront:latest
+        image: kane01/shopfront:latest
         ports:
         - containerPort: 8010
         livenessProbe:
           httpGet:
-            path: /health
+            path: /healthcheck
             port: 8010
           initialDelaySeconds: 30
           timeoutSeconds: 1
